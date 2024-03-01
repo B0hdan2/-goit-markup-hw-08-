@@ -1,0 +1,29 @@
+// portfolio-buttons__box start
+.projects-buttons__box {
+    margin-bottom: 50px;
+}
+
+.projects-buttons__list {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-buttons__item:not(:last-child) {
+    margin-right: 8px;
+}
+// portfolio-buttons__box end
+
+
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.projects__list {
+    @extend %container;
+}
+
+.projects__item {
+   @include grid(100%, 60px, 3);
+}

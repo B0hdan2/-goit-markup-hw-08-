@@ -1,0 +1,17 @@
+
+@import './decimals';
+
+@mixin fonts ($fWeight: 700, $fSize: 36px, $lHeight: 41px, $lSpacing:0.03em, $color:var(--blackColor)) {
+
+    font-weight: $fWeight;
+    font-size: $fSize;
+    line-height:decimal-ceil($lHeight / $fSize);
+    letter-spacing: $lSpacing;
+
+    color: $color;
+}
+
+@mixin grid($width, $retreat, $elementsInRow){
+    flex-basis: calc(($width - $retreat) / $elementsInRow);
+}
+

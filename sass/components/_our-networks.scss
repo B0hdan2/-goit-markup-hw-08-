@@ -1,0 +1,35 @@
+.our-networks {
+    margin-left: 70px;
+    margin-right: 93px;
+}
+
+.our-networks__list {
+    display: flex;
+}
+
+.our-networks__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.our-networks__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 100%;
+
+    transition: background-color 250ms var(--cubicBezier);
+
+     &:hover,
+     &:focus {
+    background-color: var(--accentColor);
+ }
+
+}
+
+.our-networks__svg {
+    fill: var(--whiteColor);
+}
