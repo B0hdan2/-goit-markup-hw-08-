@@ -32,17 +32,22 @@
 
 // hero button
     .hero__button{
-        padding: 10px 32px;
+        padding: 10px 24px;
 
         color: var(--whiteColor);
         background-color: var(--accentColor);
         font-weight: 700;
         line-height: calc(30 / 16);
-        letter-spacing: 0.96px;
+        letter-spacing: 0.06em;
     
         transition: background-color 250ms var(--cubicBezier),
             box-shadow 250ms var(--cubicBezier);
     
+            @media screen and (min-width:$desktop) {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
             &:hover,
             &:focus {
                 background-color: var(--accentButton);

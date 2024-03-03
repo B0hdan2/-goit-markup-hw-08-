@@ -1,5 +1,24 @@
-
 @import './decimals';
+
+
+// 480px $mobile, 768px tablet і 1200px desktop.
+// @mixin adaptability($width, $px){
+//     @media screen and ($width: $px) {
+
+//     }
+          
+// }
+
+
+
+
+
+
+@mixin grid($width, $retreat, $elementsInRow){
+    flex-basis: calc(($width - $retreat) / $elementsInRow);
+}
+
+
 
 @mixin fonts ($fWeight: 700, $fSize: 36px, $lHeight: 41px, $lSpacing:0.03em, $color:var(--blackColor)) {
 
@@ -9,9 +28,5 @@
     letter-spacing: $lSpacing;
 
     color: $color;
-}
-
-@mixin grid($width, $retreat, $elementsInRow){
-    flex-basis: calc(($width - $retreat) / $elementsInRow);
 }
 

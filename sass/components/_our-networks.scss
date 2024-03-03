@@ -1,10 +1,19 @@
 .our-networks {
-    margin-left: 70px;
+    @media screen and (min-width:$tablet)  and (max-width:1199px) {
+        margin-left: 165px;
+    }
+    @media screen and (min-width:$desktop) {
+        margin-left: 70px;
     margin-right: 93px;
+    }
+    
 }
 
 .our-networks__list {
     display: flex;
+    @media screen and (max-width:767px) {
+        justify-content: center;
+    }
 }
 
 .our-networks__item:not(:last-child) {

@@ -4,13 +4,27 @@
 }
 
 .projects-buttons__list {
+    min-width: 330px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width:$tablet) {
+        justify-content: center;
+    }
 }
 
-.projects-buttons__item:not(:last-child) {
-    margin-right: 8px;
+.projects-buttons__item {
+    &:not(:last-child){
+            margin-right: 8px; 
+    }
+
+    &:nth-child(1){
+        @media screen and (max-width:767px) {
+            margin-bottom: 15px;
+           }
+    }
 }
+
 // portfolio-buttons__box end
 
 
@@ -21,9 +35,25 @@
 
 
 .projects__list {
-    @extend %container;
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px; 
+    }
 }
 
 .projects__item {
-   @include grid(100%, 60px, 3);
+    min-width: 354px;
+    &:not(:last-child){
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width:$tablet) {
+        @include grid(100%, 30px, 2);
+    }
+    @media screen and (min-width:$desktop) {
+        @include grid(100%, 60px, 3);
+    }
 }

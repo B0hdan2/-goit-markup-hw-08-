@@ -5,12 +5,26 @@
 }
 
 .team__list {
-    @extend %container;
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px; 
+    }
 }
 
 .team__item {
+    &:not(:last-child){
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
 
-    @include grid(100%, 90px, 4);
+    @media screen and (min-width:$tablet) {
+        @include grid(100%, 30px, 2);
+    }
+    @media screen and (min-width:$desktop) {
+        @include grid(100%, 90px, 4);
+    }
 
     border-radius: 0px 0px 4px 4px;
     background: var(--whiteColor);
