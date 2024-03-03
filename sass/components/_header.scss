@@ -10,10 +10,24 @@
 .header__list {
     display: flex;
     margin-left: auto;
+
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        flex-direction: column;
+    }
+
+    @media screen and (min-width:$desktop){
+        margin-right: 50px;
+    }
 }
 
 .header__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        margin-right: 50px;
+    }
 }
 
 .header__link {
@@ -23,8 +37,6 @@
     color: var(--brandColor);
     font-weight: 500;
     letter-spacing: 0.28px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     transition: color 250ms var(--cubicBezier);
 
@@ -32,6 +44,11 @@
     &:hover,
     &:focus {
     color: var(--accentColor);
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 }
 

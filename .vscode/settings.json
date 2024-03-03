@@ -13,7 +13,7 @@
       
     ],
     "liveSassCompile.settings.generateMap": true,
-    "liveServer.settings.port": 3290,
+    "liveServer.settings.port": 9999,
     "liveSassCompile.settings.autoprefix": [
       "> 1%",
       "last 2 versions"

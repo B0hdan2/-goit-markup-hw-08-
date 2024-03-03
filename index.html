@@ -29,9 +29,20 @@
   <body>
     <header class="header">
       <div class="header__container container">
+
+
         <a class="header__logo logo" href="./index.html"
         ><span class="logo__span--color"> Web</span>studio</a
       >
+
+        <button class="pushing-menu" type="button" mobileMenu>
+          <svg class="pushing-menu__svg"  width="40px" height="40px" aria-label="перемикач мобільного меню">
+            <use class="pushing-menu__icon pushing-menu--open" href="./images/svg/symbol-defs.svg#icon-menu"></use>
+            <use  class="pushing-menu__icon pushing-menu--cross" href="./images/svg/symbol-defs.svg#icon-close1"></use>
+          </svg>
+        </button>
+
+
         <nav class="header__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -801,5 +812,6 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/form.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
