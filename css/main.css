@@ -524,9 +524,6 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.pushing-menu .pushing-menu--cross {
-  display: none;
-}
 
 .pushing-menu__icon {
   display: inline-block;
