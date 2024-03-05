@@ -22,7 +22,9 @@
 
 // heder and footer logo
 .header__logo {
-    margin-right: 93px;
+    @media screen and (min-width: $tablet) {
+        margin-right: 93px;
+    }
 }
 
 .footer__logo {

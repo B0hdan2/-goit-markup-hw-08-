@@ -6,6 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 99999;
+    overflow-x: scroll;
 
     opacity: 0;
     visibility: hidden;
@@ -101,7 +102,12 @@
 
 
 .form__input {
-    width: 448px;
+    @media screen and (max-width:1199px) {
+        width: 370px;
+    }
+    @media screen and (min-width:$desktop) {
+        width: 450px;
+    }
     height: 40px;
     padding-left: 30px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -148,7 +154,12 @@
 
 
 .form__field textarea {
-    width: 448px;
+    @media screen and (max-width:1199px) {
+        width: 370px;
+    }
+    @media screen and (min-width:$desktop) {
+        width: 450px;
+    }
     font-size: 12px;
     letter-spacing: 0.01em;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -201,19 +212,31 @@ input:focus {
 
     cursor: pointer;
 
+
     .form__checkbox:focus+&{
         border: 2px solid var(--accentColor);
     }
     
     .form__checkbox:checked+& {
         border: 0;
-        background-image: url(../../images/svg/icon-check.svg);
+        background-image: url(../images/svg/icon-check.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-origin: padding-box;
         border-radius: 2px;
     }
 }
+
+.checkbox__text{
+    @media screen and (max-width:1199px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width:$desktop) {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+    }
+    letter-spacing: 0.03em;
+    }
 
 .form__agreement {
     color: var(--accentColor);

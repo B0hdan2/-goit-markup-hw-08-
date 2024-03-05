@@ -1,19 +1,95 @@
-.menu {
+// .menu {
+
+// }
+
+.menu__box {
+    width: 100%;
     display: flex;
     align-items: center;
+    z-index: 999;
+
+    
+
+    &.is-open {
+        opacity: 1;
+        transform:translate(0);
+        
+    }
+
+    @media screen and (max-width:767px) {
+        position: absolute;
+        height: 100vh;
+        top: 100%;
+        left: 0;
+        padding: 40px;
+        background-color: var(--whiteColor);
+        flex-direction: column;
+        align-items: start;
+        opacity: 0;
+
+        transform:translate(100%,) ;
+        transition: opacity var(--cubicBezier) 250ms,
+         transform var(--cubicBezier) 250ms;
+    }
 }
+
+.button-menu {
+    @media screen and (max-width:767px) {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
+        cursor: pointer;
+
+        &--close {
+            display: none;
+        }
+
+        [aria-expanded="true"] &--close {
+            display: block;
+        }
+
+        &--open {
+            display: block;
+        }
+
+        [aria-expanded="true"] &--open {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+
+// button menu end
+
 
 
 .menu__list {
     display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
 .menu__item {
     position: relative;
+@media screen and (max-width:767px) {
+    &:not(:last-child){
+        margin-bottom: 35px;
+    }
+}
 
+@media screen and (min-width:$tablet) {
     &:not(:last-child) {
         margin-right: 50px;
     }
+}
     
 }
 
@@ -23,16 +99,48 @@
 
     color: var(--titleColor);
     font-weight: 500;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
 
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     transition: color 250ms var(--cubicBezier);
 
     &:hover,
     &:focus {
     color: var(--accentColor);
 }
+
+@media screen and (max-width:767px) {
+    font-size: 40px;
+}
+
+@media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 }
 
 
+// menu socials
+
+.menu-socials__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+.menu-socials__item {
+  &:not(:last-child){
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+ }
+}
+.menu-socials__link {
+    padding-right: 10px;
+
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+
+    color: var(--accentColor);
+}

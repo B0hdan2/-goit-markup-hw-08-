@@ -26,6 +26,7 @@ text-align: center;
 }
 
 .link--current::after {
+@media screen and (min-width:$tablet) {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -34,5 +35,6 @@ text-align: center;
     height: 4px;
     border-radius: 2px;
     background-color: var(--accentColor);
+}
 
 }
